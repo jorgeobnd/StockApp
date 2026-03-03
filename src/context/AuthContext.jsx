@@ -7,6 +7,7 @@ export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState([]);
   useEffect(() => {
     const { data: authListener } = supabase.auth.onAuthStateChange(
+      // eslint-disable-next-line no-unused-vars
       (event, session) => {
         async (event, session) => {
           console.log(event, session);
@@ -26,4 +27,8 @@ export const AuthProvider = ({ children }) => {
   return (
     <AuthContext.Provider value={{ user }}>{children}</AuthContext.Provider>
   );
+};
+
+export const UserAuth = () => {
+  return useContext(AuthContext);
 };
