@@ -3,7 +3,7 @@ import { supabase } from "../index";
 
 const AuthContext = createContext();
 
-export const AuthProvider = ({ children }) => {
+export const AuthContextProvider = ({ children }) => {
   const [user, setUser] = useState([]);
   useEffect(() => {
     const { data: authListener } = supabase.auth.onAuthStateChange(
