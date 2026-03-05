@@ -10,5 +10,4 @@ export default function HomeTemplate() {
 }
 
 const Container = styled.div`
-  display: flex;
 `;

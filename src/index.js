@@ -1,8 +1,8 @@
 export * from './App';
-export * from './components/templates/HomeTemplate';
+export { default as HomeTemplate } from './components/templates/HomeTemplate';
 export * from './context/AuthContext';
 export * from './main';
-export * from './pages/Home';
+export {default as Home} from './pages/Home';
 export * from './routers/routes';
 export * from './styles/breackpoints';
 export * from './styles/themes';
