@@ -3,6 +3,7 @@ import "./App.css";
 import { AuthContextProvider, MyRoutes, Light, Dark, Sidebar } from "./index";
 import { createContext, useState } from "react";
 import { Device } from "./styles/breackpoints";
+import HamburguerMenu from "./components/organisms/HamburguerMenu";
 
 // eslint-disable-next-line react-refresh/only-export-components
 export const ThemeContext = createContext(null);
@@ -22,7 +23,7 @@ function App() {
               <section className="ContentSidebar">
                 <Sidebar state={sideBarOpen} setState={() => setSideBarOpen(!sideBarOpen)} />
               </section>
-              <section className="ContentMenuBar">MenuBar</section>
+              <section className="ContentMenuBar"><HamburguerMenu /></section>
               <section className="ContentRoutes">Routes</section>
               <MyRoutes />
             </Container>
